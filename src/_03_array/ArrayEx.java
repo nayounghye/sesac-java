@@ -3,6 +3,7 @@ package _03_array;
 // 표준 배열
 
 import javax.swing.text.Style;
+import java.util.Arrays;
 
 // 배열
 // - 배열에 저장할 자료형을 선언하고, 배열 이름과 크기를 선언해야 한다.
@@ -61,6 +62,16 @@ public class ArrayEx {
         // - length 필드는 읽기만 가능, 값 변경 불가능
         // 반복문에서 배열길이 자주 사용.
         System.out.println("doubleArray length : " + doubleArray.length);
+
+        // - 배열 길이를 벗어난다면?
+        System.out.println(doubleArray[doubleArray.length]); // ArrayIndexOutOfBoundsException 에러 발생
+
+
+        ///////////////////////////////////////
+        // 배열 출력
+        // - toString(): 배열 내용을 문자열로 변환하여 반환
+        // - 배열 이름으로 배열 주소값이 아닌 배열 내부 값을 모두 보고싶을 때
+        System.out.println("intArray: " + Arrays.toString(intArray));
 
     }
 }

@@ -23,5 +23,28 @@ public class Prac1 {
         System.out.println("평균은 " + average);
 
 
+        //        루나 리더님 답변
+        Scanner scanner = new Scanner(System.in);
+
+        // 5개의 정수를 입력 받을 배열 생성
+        int [] nums =  new int[5];
+
+        System.out.println("5개의 정수를 입력하세요.");
+
+        // 사용자로부터 5개의 정수를 입력 받기
+        for (int i = 0; i < 5; i ++) {
+            nums[i] = scanner.nextInt();
+        }
+
+        // 평균 계산
+        double sum2 = 0;
+        for (int number : nums) {
+            sum += number;
+        }
+        double average2 = sum2 /5;
+        System.out.println("평균은 " + average2);
+
+
+
     }
 }
