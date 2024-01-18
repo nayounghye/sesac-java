@@ -206,6 +206,12 @@ public class ArrayEx {
 
             System.out.println("Deep Arrays Equal (1 vs 2) : " + deepArraysEquals); // 출력값 : true
             System.out.println("Deep Arrays Equal (1 vs 3) : " + deepArraysEquals2); // 출력값 : false
+
+            // binarySearch(arr, val) 메소드
+            // 단, 배열은 정렬된 상태여야 함!!
+            int[] sortedArray = {10, 30, 50, 70, 90};
+            int index = Arrays.binarySearch(sortedArray, 50);
+            System.out.println("Index of 50 : " + index); // 출력값 : 2 (해당하는 요소의 인덱스값)
         }
     }
 }
