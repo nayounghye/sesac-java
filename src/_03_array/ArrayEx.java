@@ -64,14 +64,47 @@ public class ArrayEx {
         System.out.println("doubleArray length : " + doubleArray.length);
 
         // - 배열 길이를 벗어난다면?
-        System.out.println(doubleArray[doubleArray.length]); // ArrayIndexOutOfBoundsException 에러 발생
-
+       // System.out.println(doubleArray[doubleArray.length]); // ArrayIndexOutOfBoundsException 에러 발생
 
         ///////////////////////////////////////
         // 배열 출력
         // - toString(): 배열 내용을 문자열로 변환하여 반환
         // - 배열 이름으로 배열 주소값이 아닌 배열 내부 값을 모두 보고싶을 때
         System.out.println("intArray: " + Arrays.toString(intArray));
+        System.out.println("charArray: " + Arrays.toString(charArray));
+        System.out.println("doubleArray: " + Arrays.toString(doubleArray));
 
+        ///////////////////////////////////////
+        // 다차원 배열
+        // - 배열 안에 또 다르 배열이 존재하는 배열
+        // 2 x 3 배열 생성 및 초기화
+        int[][] matrix = {{1,2,3},{4,5,6}};
+
+        // 3 x 2 배열 생성 및 초기화
+        int[][] martix2 = new int[3][2];
+        martix2[0][0] = 1;
+        martix2[0][1] = 2;
+        martix2[1][0] = 3;
+        martix2[1][1] = 4;
+        martix2[2][0] = 5;
+        martix2[2][1] = 6;
+
+        // 3차원 배열 생성 및 초기화
+        {
+            int[][][] threeDimensionArr = {{{1, 2}}, {{3, 4}}, {{5, 6}}, {{7,8}}};
+            System.out.println("matrix : ");
+            for (int i = 0; i < matrix.length; i++) {
+                System.out.println("matrix : " + matrix.length);
+                for (int j = 0; j < matrix[i].length; j++){
+                    System.out.println("matrix[i] : " + matrix[i].length);
+                    // 이런식으로 행렬이 구성되어 있음!
+                    // (0,0) (0,1) (0,2)
+                    // (1,0) (1,1) (1,2)
+                    System.out.print(matrix[i][j] + " ");
+                }
+                System.out.println();
+            }
+
+        }
     }
 }
