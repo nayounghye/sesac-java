@@ -212,6 +212,10 @@ public class ArrayEx {
             int[] sortedArray = {10, 30, 50, 70, 90};
             int index = Arrays.binarySearch(sortedArray, 50);
             System.out.println("Index of 50 : " + index); // 출력값 : 2 (해당하는 요소의 인덱스값)
+
+
+
+
         }
     }
 }
