@@ -17,7 +17,6 @@ import java.util.Arrays;
 // ㄴ Hashtable
 // ㄴ TreeMap
 
-
 // ArrayList 클래스
 // - List 컬렉션에서 가장 많이 사용하는 컬렉션
 // - 표준 배열보다 조금 느릴 수 있으나, 배열에서 많은 조작이 필요한 경우에 유용하게 사용됨!

@@ -4,14 +4,27 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Prac2 {
+
     public static void main(String[] args) {
-        System.out.println("=== 실습2. ArrayList ===");
-        ArrayList<String> text = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
+        ArrayList<String> stringList = new ArrayList<>();
 
-        Scanner sc = new Scanner(System.in);
-        System.out.println("문자를 입력해주세요.");
-        String n = sc.next();
+        System.out.println("문자열을 입력하세요. : ");
+        while (true) {
+            String input = scanner.nextLine();
 
-        text.add(n);
+            if (input.equalsIgnoreCase("exit")) {
+                break;
+            }
+            // ArrayList에 입력받은 문자열 추가
+            stringList.add(input);
+        }
+        System.out.println("\n입력된 문자열 목록:");
+        // ArrayList에 있는 값들 출력
+        for (String str : stringList) {
+            System.out.println(str);
+        }
+        // Scanner 닫기
+        scanner.close();
     }
 }
