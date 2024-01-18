@@ -81,13 +81,13 @@ public class ArrayEx {
         int[][] matrix = {{1,2,3},{4,5,6}};
 
         // 3 x 2 배열 생성 및 초기화
-        int[][] martix2 = new int[3][2];
-        martix2[0][0] = 1;
-        martix2[0][1] = 2;
-        martix2[1][0] = 3;
-        martix2[1][1] = 4;
-        martix2[2][0] = 5;
-        martix2[2][1] = 6;
+        int[][] matrix2 = new int[3][2];
+        matrix2[0][0] = 1;
+        matrix2[0][1] = 2;
+        matrix2[1][0] = 3;
+        matrix2[1][1] = 4;
+        matrix2[2][0] = 5;
+        matrix2[2][1] = 6;
 
         // 3차원 배열 생성 및 초기화
         {
@@ -106,8 +106,25 @@ public class ArrayEx {
             }
 
             // matrix2
-            // (0,0) (0,1) (0,2)
-            // (1,0) (1,1) (1,2)
+            System.out.println("matrix2: ");
+            for (int i = 0; i < matrix2.length; i++) {
+                for (int j = 0; j < matrix2[i].length; j++) {
+                    System.out.print(matrix2[i][j] + " ");
+                }
+                System.out.println();
+            }
+
+            // 3차원 배열의 값 출력
+            System.out.println("matrix3: ");
+            for (int i = 0; i < threeDimensionArr.length; i++) {
+                for (int j = 0; j < threeDimensionArr[i].length; j++) {
+                    for (int k = 0; k < threeDimensionArr[i][j].length; k++) {
+                        System.out.print(threeDimensionArr[i][j][k] + " ");
+                    }
+                    System.out.println();
+                }
+                System.out.println();
+            }
 
 
             ///////////////////////////////////////
@@ -139,6 +156,33 @@ public class ArrayEx {
 //            System.out.println(Arrays.toString(newFruits)); // 출력값 : [ apple, banana, kiwi, null, null ]
             System.arraycopy(originFruits, 1, newFruits, 1, originFruits.length-2);
             System.out.println(Arrays.toString(newFruits)); // 출력값 : [null, banana, null, null, null]
+
+            // Arrays 메소드
+            // copyOf(arr, copyArrayLength) 메소드
+            int[] originalArray = {1,2,3,4,5};
+            int[] copiedArray = Arrays.copyOf(originalArray, 3);
+            System.out.println("original Array : " + Arrays.toString(originalArray)); // 출력값: [1, 2, 3, 4, 5]
+            System.out.println("copied Array : " + Arrays.toString(copiedArray)); // 출력값 : [1, 2, 3]
+
+            // 시작과 끝을 직접 지정하고 싶다면?
+            // copyOfRange(arr, sIdx, eIdx) 메소드
+            int[] rangeArray = Arrays.copyOfRange(originalArray, 1,4);
+            System.out.println("range Array : " + Arrays.toString(rangeArray)); // 출력값: [2, 3, 4]
+
+            // fill(arr, n) 메소드
+            int[] filledArray = new int[5];
+            System.out.println("filled Array(before) : " + Arrays.toString((filledArray)));
+            Arrays.fill(filledArray, 7);
+            System.out.println("filled Array(after) : " + Arrays.toString((filledArray)));
+
+            // sort(arr) 메소드
+            // - 배열 내 요소들을 오름차순으로 정렬
+            int[] unsortedArray = {5, 3, 4, 1, 2};
+            Arrays.sort(unsortedArray);
+            System.out.println("sorted Array : " + Arrays.toString(unsortedArray)); // 출력값 : [1, 2, 3, 4, 5]
+
+
+
         }
     }
 }
