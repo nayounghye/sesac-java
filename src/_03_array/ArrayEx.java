@@ -181,8 +181,31 @@ public class ArrayEx {
             Arrays.sort(unsortedArray);
             System.out.println("sorted Array : " + Arrays.toString(unsortedArray)); // 출력값 : [1, 2, 3, 4, 5]
 
+            // equqls(arr1, arr2) 메소드
+            int[] array1 = {1,2,3};
+            int[] array2 = {1,2,3};
+            int[] array3 = {4,2,3};
 
+            boolean arraysEquals = Arrays.equals(array1, array2);
+            boolean arraysEquals2 = Arrays.equals(array1, array3);
 
+            System.out.println("Arrays Equal (1 vs 2) : " + arraysEquals); // 출력값 : true
+            System.out.println("Arrays Equal (1 vs 3) : " + arraysEquals2); // 출력값 : false
+
+            // == 비교 -> 오류가 발생하므로 equals 메소드를 사용해서 비교할 것!
+            System.out.println("Arrays == (1 vs 2) : " + (array1 == array2)); // 출력값 : false
+            System.out.println("Arrays == (1 vs 3) : " + (array1 == array3)); // 출력값 : false
+
+            // deepEquals(arr1, arr2) 메소드
+            int[][] deepArray1 = {{1,2}, {3,4}};
+            int[][] deepArray2 = {{1,2}, {3,4}};
+            int[][] deepArray3 = {{1,2}, {3,5}};
+
+            boolean deepArraysEquals = Arrays.deepEquals(deepArray1, deepArray2);
+            boolean deepArraysEquals2 = Arrays.deepEquals(deepArray1, deepArray3);
+
+            System.out.println("Deep Arrays Equal (1 vs 2) : " + deepArraysEquals); // 출력값 : true
+            System.out.println("Deep Arrays Equal (1 vs 3) : " + deepArraysEquals2); // 출력값 : false
         }
     }
 }
