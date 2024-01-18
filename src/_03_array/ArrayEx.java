@@ -105,6 +105,40 @@ public class ArrayEx {
                 System.out.println();
             }
 
+            // matrix2
+            // (0,0) (0,1) (0,2)
+            // (1,0) (1,1) (1,2)
+
+
+            ///////////////////////////////////////
+            // 배열 복사
+            // - 배열은 크기가 고정되어 있다!
+            // -> 더 많은 저장 공간이 필요하다면 더 큰 길이의 배열을 새로 만들어서 기존 배열을 복사하는 방법을 쓴다!
+
+            // 방법1. 반복문으로 요소를 하나씩 복사하는 방법
+            int[] origintArray = {1, 2, 3};
+            int[] newArray = new int[5];
+
+            for (int i = 0; i < origintArray.length ; i++) {
+                newArray[i] = origintArray[i];
+            }
+            System.out.println(Arrays.toString(newArray)); // 출력 : [1, 2, 3, 0, 0]
+
+            // 방법2. arraycopy() 사용하는 방법
+            // : System.arraycopy(Object src, int srcPos, Object dest, int destPos, int length)
+            // - Object src : 원본 배열
+            // - int srcPos : 원본 배열 복사 시작 인덱스
+            // - Object dest : 새 배열
+            // - int destPos : 새 배열 붙여넣기 시작할 인덱스
+            // - int length : 복사 항목 수
+
+            String[] originFruits = {"apple", "banana", "kiwi"};
+            String[] newFruits = new String[5];
+
+//            System.arraycopy(originFruits, 0, newFruits, 0, originFruits.length);
+//            System.out.println(Arrays.toString(newFruits)); // 출력값 : [ apple, banana, kiwi, null, null ]
+            System.arraycopy(originFruits, 1, newFruits, 1, originFruits.length-2);
+            System.out.println(Arrays.toString(newFruits)); // 출력값 : [null, banana, null, null, null]
         }
     }
 }
