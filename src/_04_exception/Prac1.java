@@ -55,43 +55,42 @@ public class Prac1 {
 //            prac1_2.close();
 
 
-            try {
-                System.out.println("=== 실습1-3. 예외 처리 ===");
-                Scanner prac1_3 = new Scanner(System.in);
+        try {
+            System.out.println("=== 실습1-3. 예외 처리 ===");
+            Scanner prac1_3 = new Scanner(System.in);
 
-                // 배열 크기 입력
-                System.out.println("배열 크기를 입력하십시오 : ");
-                int number = prac1_3.nextInt();
+            // 배열 크기 입력
+            System.out.println("배열 크기를 입력하십시오 : ");
+            int number = prac1_3.nextInt();
 
-                // 예외처리: 음수/0 인 경우 경고 메시지 띄우기!
-                if (number <= 0) {
-                    throw new IllegalArgumentException("정수만 입력해주세요!!");
-                }
-                // 배열 요소 입력
-                ArrayList<Integer> arrlist = new ArrayList<>();
-                System.out.println("배열 요소를 입력하십시오.");
-                for (int i = 0; i < number; i++) {
-                    int element = prac1_3.nextInt();
-                    // 중복 검사!!
-                    if (arrlist.contains(element)) {
-                        System.out.println("중복된 요소 : " + element);
-                    } else {
-                        arrlist.add(element);
-                    }
-                }
-                // 중복 요소 없는 경우
-                if (arrlist.isEmpty()) {
-                    System.out.println("중복된 요소가 없습니다!");
-                }
-                // 예외 처리
-            }catch (InputMismatchException e) {
-                System.out.println("InputMismatchException 발생!");
-            }catch (IllegalArgumentException e) {
-                System.out.println(e.getMessage());
+            // 예외처리: 음수/0 인 경우 경고 메시지 띄우기!
+            if (number <= 0) {
+                throw new IllegalArgumentException("정수만 입력해주세요!!");
             }
+            // 배열 요소 입력
+            ArrayList<Integer> arrlist = new ArrayList<>();
+            System.out.println("배열 요소를 입력하십시오.");
+            for (int i = 0; i < number; i++) {
+                int element = prac1_3.nextInt();
+                // 중복 검사!!
+                if (arrlist.contains(element)) {
+                    System.out.println("중복된 요소 : " + element);
+                } else {
+                    arrlist.add(element);
+                }
+            }
+            // 중복 요소 없는 경우
+            if (arrlist.isEmpty()) {
+                System.out.println("중복된 요소가 없습니다!");
+            }
+            // 예외 처리
+        } catch (InputMismatchException e) {
+            System.out.println("InputMismatchException 발생!");
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
         }
-
-
-
     }
+
+
+}
 
