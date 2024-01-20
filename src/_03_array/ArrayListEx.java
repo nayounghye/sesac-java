@@ -1,4 +1,5 @@
 package _03_array;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -110,6 +111,11 @@ class Student {
         this.age = age;
     }
 
-    public String getName() {return name;}
-    public int getAge() {return age;}
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
 }

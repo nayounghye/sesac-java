@@ -6,6 +6,8 @@ import java.util.Scanner;
 public class Prac2 {
 
     public static void main(String[] args) {
+        System.out.println("=== 실습2. ArrayList ===");
+
         Scanner scanner = new Scanner(System.in);
         ArrayList<String> stringList = new ArrayList<>();
 
