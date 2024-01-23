@@ -1,5 +1,7 @@
 package _05_class._02_static;
 
+import javax.sound.midi.Soundbank;
+
 public class CalculatorEx {
     public static void main(String[] args) {
         int num1 = 10;
@@ -11,5 +13,15 @@ public class CalculatorEx {
         System.out.println("원의 넓이 : " + circleArea);
         System.out.println("덧셈 결과 : " + plusResult);
         System.out.println("뺄셈 결과 : " + minusResult);
+
+        // 추가 예시
+        Calculator c1 = new Calculator();
+        Calculator c2 = new Calculator();
+
+        System.out.println(c1.count);
+        System.out.println(c2.count);
+        System.out.println(Calculator.count);
+
+
     }
 }
