@@ -30,6 +30,7 @@ public class Prac2 {
 
         // 반지름과 넓이 출력
         System.out.println("원의 넓이 : " + circle.circleSize());
+        sc.close();
 
     }
 }
