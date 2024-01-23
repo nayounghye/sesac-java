@@ -48,6 +48,8 @@ public class Prac1_2_student {
         System.out.println("학번 : " + student_ID);
         System.out.println("학년 : " + grade);
     }
+
+    // 클래스 변수 getter
     public static int getTotalStudent() {
         return totalStudent;
     }
